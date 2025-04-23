@@ -21,3 +21,16 @@
 <li class="nav-item">
 <a target="_blank" class="nav-link" href="https://www.wowthemes.net/donate/">Buy me a coffee <i class="fa fa-coffee text-danger"></i></a>
 </li>
+<!-- here comes the polygot menu -->
+<li class="nav-item dropdown language-switcher">
+  {% if page.name contains "index" %}
+    <a class="nav-link d-inline" href="{{ site.baseurl }}/">EN</a>
+    <a class="nav-link d-inline" href="{{ site.baseurl }}/de">DE</a>
+    <a class="nav-link d-inline" href="{{ site.baseurl }}/it">IT</a>
+  {% else %}
+    <a class="nav-link d-inline" href="{{ site.baseurl }}{{ page.handle }}">EN</a>
+    <a class="nav-link d-inline" href="{{ site.baseurl }}/de{{ page.handle }}">DE</a>
+    <a class="nav-link d-inline" href="{{ site.baseurl }}/it{{ page.handle }}">IT</a>
+  {% endif %}
+</li>
+
