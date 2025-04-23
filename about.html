@@ -5,7 +5,8 @@ pagination:
     enabled: true
 description: "A great Jekyll theme developed by Sal @wowthemesnet."
 language: en
-nav-order: 1
+handle: /about
+nav-order: 2
 
 ---
 
@@ -14,7 +15,7 @@ nav-order: 1
     
 {% if page.url == "/" %}
     
-
+    
     
 <!-- Begin post excerpts, let's highlight the first 4 posts on top -->
 <div class="row remove-site-content-margin">
@@ -136,7 +137,6 @@ nav-order: 1
     
 </div>
     
-
 <!-- Sticky - add sticky tag to the post you want to highlight here - tags: [sticky] -->
 {% for post in site.posts %} 
 {% if post.tags contains "sticky" %}
@@ -155,10 +155,10 @@ nav-order: 1
         </div>
     </div>
 </div> 
-<br>
 {% endif %}
 {% endfor %}
- 
+
+
     
 
 
