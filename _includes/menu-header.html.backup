@@ -1,31 +1,5 @@
 <!--  Replace menu links here -->
-<!-- polyglot menu-->
-<li class="nav-item">
-  <a class="nav-link" href="{{ site.baseurl }}{% if page.language != nil and page.language != 'en' %}/{{ page.language }}{% endif %}/index.html">Home</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="{{ site.baseurl }}{% if page.language != nil and page.language != 'en' %}/{{ page.language }}{% endif %}/authors-list.html">Authors</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="{{ site.baseurl }}{% if page.language != nil and page.language != 'en' %}/{{ page.language }}{% endif %}/contact.html">Contact</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="{{ site.baseurl }}{% if page.language != nil and page.language != 'en' %}/{{ page.language }}{% endif %}/about.html">About</a>
-</li>
-<li class="nav-item">
-  <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mundana-wordpress/">WP</a>
-</li>
-<li class="nav-item">
-  <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mundana-ghost/">Ghost</a>
-</li>
-<li class="nav-item">
-  <a target="_blank" class="nav-link" href="https://www.wowthemes.net/donate/">Buy me a coffee <i class="fa fa-coffee text-danger"></i></a>
-</li>
 
-
-
-
-<!-- original menu >
 <li class="nav-item">
 <a class="nav-link" href="{{site.baseurl}}/index.html">Home</a>
 </li>
@@ -47,7 +21,6 @@
 <li class="nav-item">
 <a target="_blank" class="nav-link" href="https://www.wowthemes.net/donate/">Buy me a coffee <i class="fa fa-coffee text-danger"></i></a>
 </li>
-<-->
 <!-- here comes the polygot menu -->
 <li class="nav-item dropdown language-switcher">
   {% if page.name contains "index" %}
