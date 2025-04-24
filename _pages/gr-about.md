@@ -7,5 +7,4 @@ comments: true
 language: gr
 ---
 
-Denne side er den danske version af "Om os".
-
+GREEEEEEK

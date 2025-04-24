@@ -7,5 +7,4 @@ comments: true
 language: da
 ---
 
-Denne side er den danske version af "Om os".
-
+iDAAAAAAAAAAAAANSK
