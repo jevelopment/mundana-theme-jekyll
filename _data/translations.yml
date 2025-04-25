@@ -1,0 +1,18 @@
+en:
+  sidebar_title: "Mundana Jekyll Theme"
+  sidebar_intro: "Hi! The website you are previewing is a demonstration for Mundana Jekyll theme, hosted on Github, made by"
+  sidebar_doc: "Documentation"
+  sidebar_coffee: "Buy me a coffee"
+
+da:
+  sidebar_title: "Mundana Jekyll Tema"
+  sidebar_intro: "Hej! Den hjemmeside du ser på er en demo af Mundana Jekyll-temaet, hostet på Github og lavet af"
+  sidebar_doc: "Dokumentation"
+  sidebar_coffee: "Køb mig en kaffe"
+
+gr:
+  sidebar_title: "Θέμα Mundana Jekyll"
+  sidebar_intro: "Γεια! Ο ιστότοπος που βλέπετε είναι μια επίδειξη του θέματος Mundana Jekyll, που φιλοξενείται στο Github και δημιουργήθηκε από τον"
+  sidebar_doc: "Τεκμηρίωση"
+  sidebar_coffee: "Αγοράστε μου έναν καφέ"
+

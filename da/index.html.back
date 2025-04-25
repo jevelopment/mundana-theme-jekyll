@@ -1,12 +1,13 @@
 ---
-title: "Mundana Free Jekyll Theme"
 layout: default
+title: "Mundana Jekyll Tema"
 pagination:
-    enabled: true
-description: "A great Jekyll theme developed by Sal @wowthemesnet."
-language: de
-handle: /about
-nav-order: 2
+  enabled: true
+  locale: da
+description: "Et fremragende Jekyll-tema udviklet af Sal @wowthemesnet."
+language: da
+nav-order: 1
+permalink: /da/
 
 ---
 
@@ -15,7 +16,7 @@ nav-order: 2
     
 {% if page.url == "/" %}
     
-    
+
     
 <!-- Begin post excerpts, let's highlight the first 4 posts on top -->
 <div class="row remove-site-content-margin">
@@ -137,6 +138,7 @@ nav-order: 2
     
 </div>
     
+
 <!-- Sticky - add sticky tag to the post you want to highlight here - tags: [sticky] -->
 {% for post in site.posts %} 
 {% if post.tags contains "sticky" %}
@@ -155,10 +157,10 @@ nav-order: 2
         </div>
     </div>
 </div> 
+<br>
 {% endif %}
 {% endfor %}
-
-
+ 
     
 
 
