@@ -1,11 +1,18 @@
 ---
 layout: post
-title:  "Education must also train one for quick, resolute and effective thinking."
+title:  "Powerful things you can do with the Markdown editor"
+author: sal
 categories: [ Jekyll, tutorial ]
-image: assets/images/3.jpg
-language: en
-
+image: assets/images/4.jpg
+tags: [featured]
+language: da
 ---
+
+DANSK
+
+
+
+
 There are lots of powerful things you can do with the Markdown editor
 
 If you've gotten pretty comfortable with writing in Markdown, then you may enjoy some more advanced tips about the types of things you can do with Markdown!
@@ -35,7 +42,7 @@ There are two types of code elements which can be inserted in Markdown, the firs
 If you want to get really fancy, you can even add syntax highlighting using Rouge.
 
 
-![walking]({{ site.baseurl }}/assets/images/8.jpg)
+![walking]({{ site.baseurl }}/assets/images/3.jpg)
 
 ## Reference lists
 

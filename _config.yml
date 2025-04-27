@@ -9,9 +9,16 @@ email: 'wowthemesnet@gmail.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: ["_pages"]
-  #permalink: /:title/
+permalink: /:title/
 
-permalink: pretty
+language: en
+languages:
+  - en
+  - da
+  - gr
+  # Add more languages as needed
+
+
 # Plugins
 plugins: 
   - jekyll-feed
@@ -58,8 +65,14 @@ markdown: kramdown
 highlighter: rouge
 
 # Paginate
-paginate: 10
+paginate: 10 # Or your preferred number of posts per page
+paginate_path: "/page:num/"
 
+# Add these language-specific paginate paths
+da:
+  paginate_path: "/da/page:num/"
+gr:
+  paginate_path: "/gr/page:num/"
 
 
 # Exclude metadata and development time dependencies (like Grunt plugins)

@@ -1,19 +1,19 @@
 ---
-title: "Mundana Gratis Jekyll Tema"
+title: "Mundana Δωρεάν Θέμα Jekyll" # Translate the title
 layout: default
 pagination:
   enabled: true
-  collection: posts_da # Keeping this for potential future refinement
-description: "Et fantastisk Jekyll tema udviklet af Sal @wowthemesnet."
-language: en
+  collection: posts_gr # You might want a separate collection or adjust filtering
+description: "Ένα εξαιρετικό θέμα Jekyll αναπτύχθηκε από τον Sal @wowthemesnet." # Translate the description
+language: gr
 nav-order: 1
-permalink: /
+permalink: /gr/
 ---
 
 <div class="container">
   {% assign language_posts = site.posts | where: "language", page.language %}
 
-  {% if page.url == "/" %}
+  {% if page.url == "/gr/" %}
     <div class="row remove-site-content-margin">
       {% assign latest_post = language_posts[0] %}
       <div class="col-md-6">
@@ -32,7 +32,7 @@ permalink: /
               <small class="d-block text-muted">
                 I <span class="catlist">
                   {% for category in latest_post.categories %}
-                  <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
+                  <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/gr/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
                   {% endfor %}
                 </span>
               </small>
@@ -61,7 +61,7 @@ permalink: /
             <small class="d-block text-muted">
               I <span class="catlist">
                 {% for category in second_post.categories %}
-                <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
+                <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/gr/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
                 {% endfor %}
               </span>
             </small>
@@ -87,7 +87,7 @@ permalink: /
             <small class="d-block text-muted">
               I <span class="catlist">
                 {% for category in third_post.categories %}
-                <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
+                <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/gr/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
                 {% endfor %}
               </span>
             </small>
@@ -113,7 +113,7 @@ permalink: /
             <small class="d-block text-muted">
               I <span class="catlist">
                 {% for category in fourth_post.categories %}
-                <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
+                <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/gr/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
                 {% endfor %}
               </span>
             </small>
@@ -135,7 +135,7 @@ permalink: /
                 <p class="mb-3 lead">
                   {{ post.excerpt | strip_html | strip_newlines | truncate: 136 }}
                 </p>
-                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">Read More</a>
+                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">Διαβάστε Περισσότερα</a>
               </div>
               <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{site.baseurl}}/{{ post.image }});">
               </div>
@@ -151,7 +151,7 @@ permalink: /
 
     <div class="col-md-8 main-loop">
 
-      <h4 class="font-weight-bold spanborder"><span>All Articles</span></h4>
+      <h4 class="font-weight-bold spanborder"><span>Όλες οι Ιστορίες</span></h4>
 
       {% for post in site.posts %}
         {% if post.language == page.language %}
@@ -165,7 +165,7 @@ permalink: /
         {% if paginator.total_pages > 1 %}
         <ul class="pagination">
           {% if paginator.previous_page %}
-            <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | prepend: '/da' }}">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | prepend: '/da' }}">Προηγούμενη</a></li>
           {% else %}
             <li class="page-item disabled"><span class="prev page-link">&laquo;</span></li>
           {% endif %}
@@ -174,14 +174,14 @@ permalink: /
             {% if page == paginator.page %}
               <li class="page-item disabled"><span class="webjeda page-link">{{ page }}</span></li>
             {% elsif page == 1 %}
-              <li class="page-item"><a class="page-link" href="{{site.baseurl}}/">{{ page }}</a></li>
+              <li class="page-item"><a class="page-link" href="{{site.baseurl}}/gr/">{{ page }}</a></li>
             {% else %}
               <li class="page-item"><a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page | prepend: '/da' }}">{{ page }}</a></li>
             {% endif %}
           {% endfor %}
 
           {% if paginator.next_page %}
-            <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' | prepend: '/da' }}">Next &raquo;</a></li>
+            <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' | prepend: '/da' }}">Επόμενη</a></li>
           {% else %}
             <li class="page-item disabled"><span class="next page-link">&raquo;</span></li>
           {% endif %}

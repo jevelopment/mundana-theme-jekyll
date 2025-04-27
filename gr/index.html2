@@ -1,19 +1,18 @@
 ---
+title: "Mundana Free Jekyll Theme"
 layout: default
-title: "Θέμα Jekyll Mundana"
 pagination:
-  enabled: true
-  locale: gr
-description: "Ένα υπέροχο θέμα Jekyll που αναπτύχθηκε από τον Sal @wowthemesnet."
+    enabled: true
+description: "A great Jekyll theme developed by Sal @wowthemesnet."
 language: gr
 nav-order: 1
-permalink: /gr/
 
 ---
 
 
 <div class="container">
-    
+ {% assign language_posts = site.posts | where: "language", page.language %}
+   
 {% if page.url == "/" %}
     
 
@@ -22,7 +21,7 @@ permalink: /gr/
 <div class="row remove-site-content-margin">
     
     <!-- latest post -->
-    {% assign latest_post = site.posts[0] %}
+    {% assign latest_post = language_posts[0] %}
     <div class="col-md-6">
     <div class="card border-0 mb-4 box-shadow">   
     <a href="{{site.baseurl}}{{latest_post.url}}">
@@ -54,7 +53,7 @@ permalink: /gr/
     <div class="col-md-6">
         
         <!-- second latest post -->
-        {%- assign second_post = site.posts[1] -%}        
+	{% assign second_post = language_posts[1] %}
         <div class="mb-3 d-flex align-items-center">                
                 {% if second_post.image %}
                 <div class="col-md-4">
@@ -81,7 +80,7 @@ permalink: /gr/
             </div>
         
         <!-- third latest post -->
-        {%- assign third_post = site.posts[2] -%}        
+	{% assign third_post = language_posts[2] %}
         <div class="mb-3 d-flex align-items-center">                
                 {% if third_post.image %}
                 <div class="col-md-4">
@@ -108,7 +107,7 @@ permalink: /gr/
             </div>
         
         <!-- fourth latest post -->
-        {%- assign fourth_post = site.posts[3] -%}        
+        {% assign fourth_post = language_posts[3] %}
         <div class="mb-3 d-flex align-items-center">                
                 {% if fourth_post.image %}
                 <div class="col-md-4">
@@ -140,7 +139,7 @@ permalink: /gr/
     
 
 <!-- Sticky - add sticky tag to the post you want to highlight here - tags: [sticky] -->
-{% for post in site.posts %} 
+{% for post in language_posts %}
 {% if post.tags contains "sticky" %}
 <div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative">
     <div class="pl-4 pr-0 h-100 tofront">
