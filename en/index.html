@@ -11,11 +11,14 @@ aliases:
   - /
 ---
 
+
+
+
 <div class="container">
 
 {% assign language_posts = site.posts | where: "language", page.language %}
 {% assign english_posts = site.posts | where: "language", "en" %}
-
+<p>Current page language: {{ page.language }}</p>
 <p>Number of language_posts: {{ language_posts | size }}</p>
 
 {% if page.url == "/" or page.url == "/en/" %}
