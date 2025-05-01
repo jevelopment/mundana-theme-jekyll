@@ -7,45 +7,27 @@ baseurl: '/mundana-theme-jekyll'
 disqus: 'demowebsite'
 email: 'wowthemesnet@gmail.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
-
 include: ["_pages"]
-permalink: /:title/
-
+permalink: /:title.html # Changed this line
 language: en
 languages:
   - en
   - da
   - gr
-  # Add more languages as needed
-
 
 # Plugins
-plugins: 
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  
-authors:
-    sal:
-      name:           Jake
-      site:           https://www.sydligt-storby-liv.dk
-      avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
 
-    jane:
-      name:           Kat
-      site:           https://www.sydligt-storby-liv.dk
-      avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
- 
-# Defaults
+# Paginate
+paginate: 10
+paginate_path: "/en/page:num/"
+
+# Language-specific paginate paths
 defaults:
-
   # all posts
   - scope:
       path: "_posts"
@@ -53,27 +35,42 @@ defaults:
       layout: post
       author: sal
       avatar: /assets/images/avatar1.jpg
-      
+
   # all pages
   - scope:
       path: "_pages"
     values:
       layout: page
-      
+
+  # language-specific indices
+  - scope:
+      path: "index-da.html"
+    values:
+      language: da
+      paginate_path: "/da/page:num/"
+      permalink: /da/
+
+  - scope:
+      path: "index-gr.html"
+    values:
+      language: gr
+      paginate_path: "/gr/page:num/"
+      permalink: /gr/
+
+  # English index page (now in /en/index.html)
+  - scope:
+      path: "en/index.html"
+    values:
+      language: en
+      layout: default
+      paginate_path: "/en/page:num/" # Keep this
+
 # Syntax
 markdown: kramdown
 highlighter: rouge
 
-# Paginate
-paginate: 10 # Or your preferred number of posts per page
-paginate_path: "/page:num/"
-
-# Add these language-specific paginate paths
-da:
-  paginate_path: "/da/page:num/"
-gr:
-  paginate_path: "/gr/page:num/"
-
-
-# Exclude metadata and development time dependencies (like Grunt plugins)
+# Exclude metadata and development time dependencies
 exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+
+
+
